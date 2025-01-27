@@ -1,13 +1,23 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './HomePage';
+import EmployeeDashboard from './EmployeeDashboard';
+import ManagerDashboard from './ManagerDashboard';
+import AdminDashboard from './AdminDashboard';
+import SuperAdminDashboard from './SuperAdminDashboard';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to My React App</h1>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} exact />
+        <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
+        <Route path="/manager-dashboard" element={<ManagerDashboard />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/superadmin" element={<SuperAdminDashboard />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
