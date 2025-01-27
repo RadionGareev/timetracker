@@ -1,0 +1,24 @@
+.home-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.buttons-container {
+  margin-top: 20px;
+}
+
+.access-button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.access-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
